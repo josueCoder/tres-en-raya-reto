@@ -176,7 +176,48 @@
 .rules-list_rule{
     font-weight: 300;
 }
+.footer{
+    padding: 16px 0;
+    text-align: center;
 
+}
+.footer__list-container{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+
+}
+.footer__list__item{
+    list-style: none;
+
+}
+.list__item__link-social-media{
+    font-size: 40px;
+    color: var(--color-text-second);
+    transition: all 0.5s;
+
+}
+.list__item__link-social-media:hover{
+   
+    color:gold;
+    transition: all 1s;
+
+}
+.social-media__icon{
+   
+    transition:all 0.5s;
+}
+.social-media__icon:hover{
+    transform: rotate(360deg);
+    transition:all 0.5s;
+}
+
+.footer__credits{
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
 
 
 
