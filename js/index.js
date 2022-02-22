@@ -60,7 +60,7 @@ const  estado=()=>{
 	function sonIguales(...args){
 		valores = args.map(x=>x.innerHTML);
 		if(valores[0] != "" && valores.every((x, i, arr) => x===arr[0])){
-			args.forEach(x => x.style.backgroundColor = "Fuchsia")
+			args.forEach(x => x.style.backgroundColor = "Turquoise")
 			return true;
 		}
 		else{
@@ -114,6 +114,32 @@ const  estado=()=>{
 
 	return nEstado;
 }
+
+const bot=()=>{
+
+    function aleatorio(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  let valores = botones.map(x=>x.innerHTML);
+  let pos = -1;
+
+  if(valores[4]==""){
+      pos = 4;
+  }
+  else{
+      let n = aleatorio(0, botones.length-1);
+      while(valores[n]!=""){
+          n = aleatorio(0, botones.length-1); 
+      }
+      pos = n;
+  }
+
+  botones[pos].innerHTML = "O";
+  return pos;
+
+}
+
 
 
 
