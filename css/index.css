@@ -10,8 +10,10 @@
 
 
 .body{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #282c34;
-	font-family: 'Press Start 2P';
+    color: var(--color-text-main);
 }
 
 
@@ -74,5 +76,50 @@
     color:var(--color-text-main)
 }
 
-/* ********************************++ */
+.main{
+    padding: 16px 0;
+    background-color: blueviolet;
+}
+.main__article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Press Start 2P', cursive;
+    background-color:blueviolet;
+    
+
+}
+
+
+.article__title{
+    font-size: 2rem;
+    margin: 0;
+   
+
+}
+.article__text-winner{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--color-text-second);
+    margin: 0;
+    /* visibility: hidden; */
+
+}
+.article__boar{
+    max-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+    background-color: green;
+
+}
+.article__boar__button{
+    width: 150px;
+    height: 150px;
+    max-width: 33.33%;
+    font-size: 10em;
+}
+
 
