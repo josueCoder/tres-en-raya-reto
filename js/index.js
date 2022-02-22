@@ -52,8 +52,9 @@ function cambiarTurno(){
 	
 }
 
-function estado(){
-	posicionVictoria = 0;
+const  estado=()=>{
+
+    posicionVictoria = 0;
 	nEstado = 0;
 
 	function sonIguales(...args){
@@ -115,29 +116,6 @@ function estado(){
 }
 
 
-const bot=()=>{
 
-    function aleatorio(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  let valores = botones.map(x=>x.innerHTML);
-  let pos = -1;
-
-  if(valores[4]==""){
-      pos = 4;
-  }
-  else{
-      let n = aleatorio(0, botones.length-1);
-      while(valores[n]!=""){
-          n = aleatorio(0, botones.length-1); 
-      }
-      pos = n;
-  }
-
-  botones[pos].innerHTML = "O";
-  return pos;
-
-}
 
 
