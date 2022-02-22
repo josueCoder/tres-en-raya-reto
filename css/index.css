@@ -120,6 +120,7 @@
     height: 150px;
     max-width: 33.33%;
     font-size: 10em;
+    padding: 2px 0;
 }
 .rules{
     display: flex;
@@ -218,7 +219,10 @@
     font-weight: 400;
     letter-spacing: 1.5px;
 }
-
+#textoVictoria{
+	visibility: hidden;
+	color: var(--color-text-second);
+}
 
 
 
