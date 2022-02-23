@@ -98,12 +98,15 @@
    
 
 }
+.article__empieza{
+    color: gold;
+}
 .article__text-winner{
     font-size: 1rem;
     letter-spacing: 2px;
     color: var(--color-text-second);
     margin: 0;
-    /* visibility: hidden; */
+    
 
 }
 .article__boar{
