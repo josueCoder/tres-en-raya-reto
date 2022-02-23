@@ -33,7 +33,7 @@ function ponerFicha(event){
 			partidaAcabada = true;
 		}
 		else if(estadoPartida == -1){
-			textoVictoria.innerHTML = "😥Has perdido mi leader 😥"
+			textoVictoria.innerHTML = "😥Has perdido la partida 😥"
 			partidaAcabada = true;
 			textoVictoria.style.visibility = "visible";
 		}
