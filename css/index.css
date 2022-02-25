@@ -1,0 +1,215 @@
+/* font imported from font.google.com */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+
+:root {
+  --color-text-main: rgb(240, 240, 240);
+  --color-text-second: #0bd4c1;
+
+  --color-hover-menu: #14bdac;
+}
+
+.body {
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #282c34;
+  color: var(--color-text-main);
+}
+
+.header {
+  background-color: #20232a;
+  padding: 8px 0;
+}
+
+.header__nav {
+  margin: auto;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.header__nav__image-play-container {
+  width: 55px;
+
+  margin: 0;
+}
+
+.image-play__image-play {
+  width: 100%;
+}
+
+.header__nav__list-menus-container {
+  display: flex;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__list-menus__menu {
+    list-style: none;
+    padding: 5px 8px;
+    border-radius: .4rem;
+    transition: all 0.5s;
+    margin: 2px;
+}
+
+.nav__list-menus__menu:hover {
+  background-color: var(--color-hover-menu);
+
+  transition: all 0.5s;
+}
+
+.list-menus__menu-link {
+  text-decoration: none;
+  color: var(--color-text-main);
+}
+
+.main {
+  padding: 16px 0;
+  background-color: blueviolet;
+}
+
+.main__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: "Press Start 2P", cursive;
+  background-color: blueviolet;
+}
+
+.article__title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.article__empieza {
+  color: gold;
+}
+
+.article__text-winner {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--color-text-second);
+  margin: 0;
+}
+
+.article__boar {
+    max-width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    background: none;
+}
+
+.article__boar__button {
+    font-family: Comfortaa;
+    width: 8rem;
+    height: 8rem;
+    max-width: 33.33%;
+    font-size: 6rem;
+    padding: 1rem;
+    margin: .1rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.rules {
+  display: flex;
+  background-color: blueviolet;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.rules__image-tres-raya-container {
+  max-width: 365px;
+  margin: 0;
+  border: solid 8px var(--color-text-second);
+  transition: all 0.5s;
+}
+
+.rules__image-tres-raya-container:hover {
+  border: solid 8px gold;
+  transition: all 0.5s;
+}
+
+.image-tres-raya__image {
+  width: 100%;
+  margin: 0;
+}
+
+.rules__rules-play-container {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 20px;
+}
+
+.rules-play__title {
+  margin: 0 auto;
+  font-family: "Press Start 2P", cursive;
+  font-size: 2rem;
+  color: var(--color-text-second);
+}
+
+.rules-play__rules-list-container {
+  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rules-list_rule {
+  font-weight: 300;
+}
+
+.footer {
+  padding: 16px 0;
+  text-align: center;
+}
+
+.footer__list-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+}
+
+.footer__list__item {
+  list-style: none;
+}
+
+.list__item__link-social-media {
+  font-size: 40px;
+  color: var(--color-text-second);
+  transition: all 0.5s;
+}
+
+.list__item__link-social-media:hover {
+  color: gold;
+  transition: all 1s;
+}
+
+.social-media__icon {
+  transition: all 0.5s;
+}
+
+.social-media__icon:hover {
+  transform: rotate(360deg);
+  transition: all 0.5s;
+}
+
+.footer__credits {
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+#textoVictoria {
+  visibility: hidden;
+  color: var(--color-text-second);
+}
