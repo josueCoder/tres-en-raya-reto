@@ -113,16 +113,16 @@
     max-width: 450px;
     display: flex;
     flex-wrap: wrap;
-    
+    border: solid 0.4rem black;
 
-    background-color: green;
+    
 
 }
 .article__boar__button{
     width: 150px;
     height: 150px;
     max-width: 33.33%;
-    font-size: 10em;
+    font-size: 7rem;
     padding: 2px 0;
 }
 .rules{
@@ -222,7 +222,7 @@
     font-weight: 400;
     letter-spacing: 1.5px;
 }
-#textoVictoria{
+#articleTextWinner{
 	visibility: hidden;
 	color: var(--color-text-second);
 }
