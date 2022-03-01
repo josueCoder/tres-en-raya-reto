@@ -2,6 +2,7 @@ let fichas = ["O", "X"];
 let turno = 1;
 let fichasPuestasTablero = 0;
 let endGame = false;
+let buttonUpdate = document.getElementById("buttonUpdate");
 let articleTextWinner = document.getElementById("articleTextWinner");
 let buttons = Array.from(document.getElementsByTagName("button"));
 
@@ -138,6 +139,11 @@ const bot=()=>{
 
 }
 
+const updateGame=()=>{
+	location.reload();
+}
+
+buttonUpdate.addEventListener("click",updateGame)
 
 
 

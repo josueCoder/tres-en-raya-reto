@@ -125,6 +125,13 @@
     font-size: 7rem;
     padding: 2px 0;
 }
+.article__button-play-again{
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
 .rules{
     display: flex;
     background-color: blueviolet;
