@@ -57,8 +57,8 @@ const  estado=()=>{
 	nEstado = 0;
 
 	function sonEquals(...args){
-		valores = args.map(x=>x.innerHTML);
-		if(valores[0] != "" && valores.every((x, i, arr) => x===arr[0])){
+		valuesButtons = args.map(x=>x.innerHTML);
+		if(valuesButtons[0] != "" && valuesButtons.every((x, i, arr) => x===arr[0])){
 			args.forEach(x => x.style.backgroundColor = "Turquoise")
 			return true;
 		}
@@ -120,15 +120,15 @@ const bot=()=>{
         return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  let valores = buttons.map(x=>x.innerHTML);
+  let valuesButtons = buttons.map(x=>x.innerHTML);
   let pos = -1;
 
-  if(valores[4]==""){
+  if(valuesButtons[4]==""){
       pos = 4;
   }
   else{
       let n = aleatorio(0, buttons.length-1);
-      while(valores[n]!=""){
+      while(valuesButtons[n]!=""){
           n = aleatorio(0, buttons.length-1); 
       }
       pos = n;

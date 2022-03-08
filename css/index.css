@@ -1,6 +1,8 @@
 :root{
     --color-text-main: rgb(240, 240, 240);
     --color-text-second:#0BD4C1;
+    --primary-theme-color: blueviolet;
+    --inverse-theme-color:rgb(28, 15, 216);
    
     --color-hover-menu: #14bdac;
    
@@ -12,7 +14,8 @@
 .body{
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #282c34;
+    
+    background-image: linear-gradient(to right,var(--primary-theme-color),var(--inverse-theme-color));
     color: var(--color-text-main);
 }
 
@@ -20,8 +23,10 @@
 
 .header{
     
-    background-color: #20232a;
+   
+    background-image: linear-gradient(to right, #282c34,var(--primary-theme-color),var(--inverse-theme-color), #282c34);
     padding: 8px 0;
+    box-shadow: 0 0.25rem 0 0 #282c34 ;
    
 
 }
@@ -78,7 +83,7 @@
 
 .main{
     padding: 16px 0;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 .main__article{
     display: flex;
@@ -86,7 +91,7 @@
     align-items: center;
     gap: 20px;
     font-family: 'Press Start 2P', cursive;
-    background-color:blueviolet;
+    /* background-color:blueviolet; */
     
 
 }
@@ -134,7 +139,7 @@
 }
 .rules{
     display: flex;
-    background-color: blueviolet;
+    
     justify-content: center;
     align-items: center;
     gap: 20px;
