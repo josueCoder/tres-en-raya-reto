@@ -1,26 +1,30 @@
+
+
+
 let fichas = ["O", "X"];
 let turno = 1;
 let fichasPuestasTablero = 0;
 let endGame = false;
 let buttonUpdate = document.getElementById("buttonUpdate");
 let articleTextWinner = document.getElementById("articleTextWinner");
-let buttons = Array.from(document.getElementsByTagName("button"));
+let buttons = Array.from(document.querySelectorAll(".article__boar__button"));
+let tablero = document.getElementById("tablero");
 
 buttons.forEach(
 	x => x.addEventListener("click", ponerFicha)
 );
 
 function ponerFicha(event){
-	let botonPulsado = event.target;
-	if(!endGame && botonPulsado.innerHTML == ""){
-		botonPulsado.innerHTML = fichas[turno];
+	let buttonPresed = event.target;
+	if(!endGame && buttonPresed.innerHTML == ""){
+		buttonPresed.innerHTML = fichas[turno];
 		fichasPuestasTablero += 1;
 		
 		let estadoPartida = estado();
 		if(estadoPartida == 0){
 			cambiarTurno();
 			if(fichasPuestasTablero < 9){
-				bot();
+				pseudoBot();
 				estadoPartida = estado();
 				fichasPuestasTablero += 1;
 				cambiarTurno();	
@@ -30,6 +34,7 @@ function ponerFicha(event){
 		if(estadoPartida == 1){
 			articleTextWinner.style.visibility = "visible";
 			endGame = true;
+			
 		}
 		else if(estadoPartida == -1){
 			articleTextWinner.innerHTML = "😥Has perdido la partida 😥"
@@ -50,6 +55,7 @@ function cambiarTurno(){
     console.log(turno)
 	
 }
+
 
 const  estado=()=>{
 
@@ -114,36 +120,51 @@ const  estado=()=>{
 	return nEstado;
 }
 
-const bot=()=>{
+const pseudoBot=()=>{
 
     function aleatorio(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   let valuesButtons = buttons.map(x=>x.innerHTML);
-  let pos = -1;
+  let positionFree = -1;
 
   if(valuesButtons[4]==""){
-      pos = 4;
+      positionFree = 4;
   }
   else{
       let n = aleatorio(0, buttons.length-1);
       while(valuesButtons[n]!=""){
           n = aleatorio(0, buttons.length-1); 
       }
-      pos = n;
+      positionFree = n;
   }
 
-  buttons[pos].innerHTML = "O";
-  return pos;
+  buttons[positionFree].innerHTML = "O";
+  return positionFree;
 
 }
 
-const updateGame=()=>{
-	location.reload();
+
+
+const clearButtons=()=>{
+	
+	    
+	
+	for (let index = 0; index < buttons.length; index++) {
+		
+		buttons[index].innerHTML="";
+		buttons[index].style.backgroundColor = "#efefef"
+		
+	}
+	turno = 1;
+	fichasPuestasTablero = 0;
+	endGame = false;
+	articleTextWinner.style.visibility="hidden";
+
 }
 
-buttonUpdate.addEventListener("click",updateGame)
+buttonUpdate.addEventListener("click",clearButtons)
 
 
 

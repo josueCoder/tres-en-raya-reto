@@ -113,8 +113,15 @@
     color: var(--color-text-second);
     margin: 0;
     
+    visibility: hidden;
+	color: var(--color-text-second);
 
 }
+
+
+
+
+
 .article__boar{
     max-width: 300px;
     display: flex;
@@ -235,10 +242,7 @@
     font-weight: 400;
     letter-spacing: 1.5px;
 }
-#articleTextWinner{
-	visibility: hidden;
-	color: var(--color-text-second);
-}
+
 @media(min-width:854px){
     .article__boar{
         max-width: 450px;
